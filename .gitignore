@@ -1,0 +1,17 @@
+# Ignore build and installation artifacts
+build/
+install/
+log/
+
+# Ignore Python cache directories
+*.pyc
+__pycache__/
+
+# Ignore IDE and editor folders
+.vscode/
+.idea/
+*.swp
+*~
+
+# Ignore package lock directories
+COLCON_IGNORE
