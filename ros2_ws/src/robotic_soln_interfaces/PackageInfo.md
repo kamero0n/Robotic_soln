@@ -1,10 +1,9 @@
 # Package Overview
 
-This section provides an overview of the package within ros_ws.
 
 ## ' robotic_soln_interfaces'
 
-The **robotic_soln_interfaces** provides interfaces and implementations for interacting with 3-DOF sensors. It currently includes a custom service for fetching sensor data. It can easily be modified. 
+The **robotic_soln_interfaces** provides interfaces and implementations for interacting with 3-DOF sensors. It currently includes a custom service for fetching sensor data. It can easily be modified and scaled to fit the user's needs.
 
 ### Services
 - **GetSensorData**
@@ -17,3 +16,9 @@ The **robotic_soln_interfaces** provides interfaces and implementations for inte
         - **bool success:** Indicates whether the data was fetched succesfully
 
 Usage Example
+
+You can request samples using the command below within the Robotic_soln/ros2_ws directory.
+
+```
+ros2 service call /get_sensor_data robotic_soln_interfaces/srv/GetSensorData "{'num_samples': 1000}"
+```
