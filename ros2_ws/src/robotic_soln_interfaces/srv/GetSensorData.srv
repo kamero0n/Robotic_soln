@@ -1,0 +1,6 @@
+# Request message
+int32 num_samples
+---
+# Response message
+float64[] sensor_data
+bool success
