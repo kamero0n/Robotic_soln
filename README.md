@@ -1,4 +1,15 @@
 # Robotic_HW
+
+## Installation/Setup
+You should be able to clone the repo in your desired location on your computer. Ensure to build the packages before testing any scripts.
+
+## Package READMEs
+There's a README within each package for this project. I've linked it for each one below.
+
+1. robotic_soln_interfaces: [README.md](https://github.com/kamero0n/Robotic_soln/blob/master/ros2_ws/src/robotic_soln_interfaces/PackageInfo.md)
+2. sensor_service: [README.md](https://github.com/kamero0n/Robotic_soln/blob/master/ros2_ws/src/sensor_service/README.md)
+
+
 ## Context
 The design of our cells in Machina Labs has evolved over the past years. Currently, each of our cells has two articulated industrial robots on rails (a total of 7 axes) and a frame with hydraulic clamps. For the parts to form correctly, we must exert and maintain a dynamic force during the forming in a very accurate location in space. Currently, each robot is equipped with a load cell. See a quick video about our process [here](https://www.youtube.com/watch?v=iqYMprTEXRI). We are using ROS2 to collect the data from the network and control the robots in real-time. As a robotic engineer, we keep developing different modules for our network to add features to the system.  
  

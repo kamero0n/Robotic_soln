@@ -13,10 +13,21 @@ The `robotic_soln_interfaces` package provides ROS2 service interfaces for inter
   - `float64[] samples`: Array of sensor data samples. Since it's 3-DOF, this is grouping all axes together, but we could easily separate this into 3 arrays to collect for each axis. 
   - `bool success`: Indicates whether the data was successfully fetched.
 
-## Usage
-To use the `GetSensorData` service, if you have the service node and sensor running, follow these steps:
-1. Ensure your ROS2 environment is setup and sourced correctly.
-2. Navigate to your `ros2_ws` workspace directory.
-3. Execute the service call:
-   ```bash
-   ros2 service call /get_sensor_data robotic_soln_interfaces/srv/GetSensorData "{'num_samples': 1000}"
+## Testing
+To test the `GetSensorData` service is implemented correctly, you can check in the directory of the `ros2_ws` with the following commands:
+```bash
+  cd Robotic_soln/ros2_ws/
+  colcon build --packages-select robotic_soln_interfaces
+  source install/setup.bash
+  ros2 interface show robotic_soln_interfaces/srv/GetSensorData 
+```
+
+If implemented/setup correctly, you should expect to see the following in the terminal in response to the previous commands:
+```bash
+# Request message
+int32 num_samples
+---
+# Response message
+float64[] sensor_data
+bool success
+```
