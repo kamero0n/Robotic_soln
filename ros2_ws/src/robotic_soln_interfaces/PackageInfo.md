@@ -10,11 +10,11 @@ The `robotic_soln_interfaces` package provides ROS2 service interfaces for inter
 - **Request Parameters:**
   - `int32 num_samples`: Number of samples to fetch.
 - **Response Parameters:**
-  - `float64[] samples`: Array of sensor data samples.
+  - `float64[] samples`: Array of sensor data samples. Since it's 3-DOF, this is grouping all axes together, but we could easily separate this into 3 arrays to collect for each axis. 
   - `bool success`: Indicates whether the data was successfully fetched.
 
 ## Usage
-To use the `GetSensorData` service, follow these steps:
+To use the `GetSensorData` service, if you have the service node and sensor running, follow these steps:
 1. Ensure your ROS2 environment is setup and sourced correctly.
 2. Navigate to your `ros2_ws` workspace directory.
 3. Execute the service call:
